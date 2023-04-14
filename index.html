@@ -19,24 +19,28 @@
     />
   </head>
   <body>
-    <div class="container">
+    <div id="container" class="container">
       <h1 class="text-center py-3">Rock Paper Scissors</h1>
-      <form action="">
+      <h3 class="text-center py-3">Select your move:</h3>
+      <form onsubmit="return checkChoice(this);">
         <div class="row d-flex justify-content-center py-3">
           <div class="col-3">
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Select your move:</option>
-              <option value="rock">Rock</option>
-              <option value="paper">Paper</option>
-              <option value="scissors">Scissors</option>
+            <select
+              id="selectElement"
+              class="form-select"
+              aria-label="Default select example"
+            >
+              <option id="rock" value="rock">Rock</option>
+              <option id="paper" value="paper">Paper</option>
+              <option id="scissors" value="scissors">Scissors</option>
             </select>
           </div>
         </div>
         <div class="col"></div>
+        <div class="col d-flex justify-content-center">
+          <input class="btn btn-primary" type="submit" value="Submit" />
+        </div>
       </form>
-      <div class="col d-flex justify-content-center">
-        <input class="btn btn-primary" type="submit" value="Submit" />
-      </div>
     </div>
     <script src="script.js" async defer></script>
     <script
